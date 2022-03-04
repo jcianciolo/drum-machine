@@ -5,6 +5,7 @@ const DrumPad = ({ id, audioClip, soundEffect, currentPad, setCurrentPad }) => {
 let lowerCaseId = id.toLowerCase();
 
   let handleClick = (e) => {
+      e.preventDefault();
       setCurrentPad([id, audioClip]);
       soundEffect.play()
       console.log(e.target);
