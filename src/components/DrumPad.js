@@ -1,29 +1,31 @@
 import React from 'react'
 
-const DrumPad = ({ id, audioClip, soundEffect, currentPad, setCurrentPad }) => {
+const DrumPad = ({ id, audioClip, soundEffect, currentPad, setCurrentPad, handleKeyDown }) => {
 //   let audioFile = new Audio(soundEffect);
-let lowerCaseId = id.toLowerCase();
+//   let lowerCaseId = id.toLowerCase();
 
   let handleClick = (e) => {
       e.preventDefault();
       setCurrentPad([id, audioClip]);
       soundEffect.play()
       console.log(e.target);
-
   }
+
+
 //   let handleKeyDown = (e) => {
 //     // if (e.target.key === lowerCaseId) {
 //     //     setCurrentPad([id, audioClip]);
-//     //     audioFile.play()Q
+//     //     audioFile.play()
 //     // }
 //     setCurrentPad([id, audioClip]);
 //     soundEffect.play();
 //     console.log(e.key);
 
+
 //     }
   return (
     
-    <button tabIndex={0} onClick={handleClick} className="drum-button">
+    <button onClick={handleClick} onKeyDown={handleKeyDown} className="drum-button">
             <audio
                 className='clip'
                 onClick={() => soundEffect.play}
