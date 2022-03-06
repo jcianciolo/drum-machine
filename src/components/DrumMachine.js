@@ -14,14 +14,14 @@ const hatFourSound = new Audio(hat4);
 
 const keybindings = [
     ['q', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
-    ['w', '../audio/CYCdh_Sab_OpHat-01.mp3', hatFourSound],
-    ['e', '../audio/CYCdh_Sab_OpHat-01.mp3', hatOneSound],
-    ['a', '../audio/CYCdh_Sab_OpHat-01.mp3', hatOneSound],
-    ['s', '../audio/CYCdh_Sab_OpHat-01.mp3', hatOneSound],
-    ['d', '../audio/CYCdh_Sab_OpHat-01.mp3', hatOneSound],
-    ['z', '../audio/CYCdh_Sab_OpHat-01.mp3', hatOneSound],
-    ['x', '../audio/CYCdh_Sab_OpHat-01.mp3', hatOneSound],
-    ['c', '../audio/CYCdh_Sab_OpHat-01.mp3', hatOneSound]
+    ['w', '../audio/CYCdh_Sab_OpHat-01.wav', hatFourSound],
+    ['e', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
+    ['a', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
+    ['s', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
+    ['d', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
+    ['z', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
+    ['x', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
+    ['c', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound]
 ]
 
 const soundArray = [];
@@ -50,24 +50,31 @@ let handleKeyDown = (e) => {
         hatFourSound.play();
     }
     if (e.key === 'e') {
+        hatOneSound.currentTime = 0;
         hatOneSound.play();
     }
     if (e.key === 'a') {
+        hatOneSound.currentTime = 0;
         hatOneSound.play();
     }
     if (e.key === 's') {
+        hatOneSound.currentTime = 0;
         hatOneSound.play();
     }
     if (e.key === 'd') {
+        hatOneSound.currentTime = 0;
         hatOneSound.play();
     }
     if (e.key === 'z') {
+        hatOneSound.currentTime = 0;
         hatOneSound.play();
     }
     if (e.key === 'x') {
+        hatOneSound.currentTime = 0;
         hatOneSound.play();
     }
     if (e.key === 'c') {
+        hatOneSound.currentTime = 0;
         hatOneSound.play();
     }
     console.log(soundArray);
@@ -83,7 +90,6 @@ const drumPads = keybindings.map((drum) =>
         soundEffect={drum[2]}
         currentPad={currentPad}
         setCurrentPad={setCurrentPad}
-        handleKeyDown={handleKeyDown}
     />
 );
 

@@ -7,8 +7,8 @@ const DrumPad = ({ id, audioClip, soundEffect, currentPad, setCurrentPad, handle
   let handleClick = (e) => {
       e.preventDefault();
       setCurrentPad([id, audioClip]);
-      soundEffect.play()
-      console.log(e.target);
+      // soundEffect.currentTime = 0;
+      soundEffect.play() 
   }
 
 
@@ -25,10 +25,9 @@ const DrumPad = ({ id, audioClip, soundEffect, currentPad, setCurrentPad, handle
 //     }
   return (
     
-    <button onClick={handleClick} onKeyDown={handleKeyDown} className="drum-button">
+    <button onClick={handleClick} className="drum-button">
             <audio
                 className='clip'
-                onClick={() => soundEffect.play}
                 src={soundEffect}
                 type="audio/mpeg">
                     Your browser does not support the
