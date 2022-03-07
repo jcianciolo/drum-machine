@@ -26,6 +26,7 @@ const DrumPad = ({ id, audioClip, soundEffect, currentPad, setCurrentPad, handle
   return (
     
     <button onClick={handleClick} className="drum-button">
+            <p>{id}</p>
             <audio
                 className='clip'
                 src={soundEffect}
@@ -33,7 +34,6 @@ const DrumPad = ({ id, audioClip, soundEffect, currentPad, setCurrentPad, handle
                     Your browser does not support the
                     <code>audio</code> element.
             </audio>
-            <p>{id}</p>
 
 
     </button>

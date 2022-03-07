@@ -34,7 +34,7 @@
 #interactive-content {
   display: flex;
   /* padding: 20px; */
-  justify-content: center;
+  justify-content: space-around;
 }
 
 #pads {
@@ -44,11 +44,21 @@
 }
 
 .drum-button {
+  padding: 0px;
   height: 70px;
   width: 70px;
-  display: flex;
-  /* align-items: ; */
-  justify-content: center;
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.drum-button p {
+  /* text-align: center; */
+  line-height: 4.5;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 ul {
@@ -57,5 +67,9 @@ ul {
 
 #options {
   display: flex;
+  height: auto;
   flex-direction: column;
+  border: 1px solid black;
+  /* text-align: center; */
+  align-items: center;
 }

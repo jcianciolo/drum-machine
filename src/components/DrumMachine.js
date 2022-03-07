@@ -1,27 +1,29 @@
 import React from 'react'
 import DrumPad from './DrumPad'
 import { useState } from 'react'
-import hat1 from '../audio/CYCdh_Sab_OpHat-01.mp3'
+import hat1 from '../audio/CYCdh_Sab_OpHat-03.wav'
 import hat4 from '../audio/CYCdh_Sab_HfHat-04.wav'
+import hat6 from '../audio/CYCdh_Sab_ClHat-06.wav'
 
 
 const DrumMachine = () => {
 const [currentPad, setCurrentPad] = useState([]);
 const hatOneSound = new Audio(hat1);
 const hatFourSound = new Audio(hat4);
+const hatSixSound = new Audio(hat6);
 
 
 
 const keybindings = [
-    ['q', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
-    ['w', '../audio/CYCdh_Sab_OpHat-01.wav', hatFourSound],
-    ['e', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
-    ['a', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
-    ['s', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
-    ['d', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
-    ['z', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
-    ['x', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound],
-    ['c', '../audio/CYCdh_Sab_OpHat-01.wav', hatOneSound]
+    ['q', '../audio/CYCdh_Sab_OpHat-03.wav', hatOneSound],
+    ['w', '../audio/CYCdh_Sab_HfHat-04.wav', hatFourSound],
+    ['e', '../audio/CYCdh_Sab_ClHat-06.wav', hatSixSound],
+    ['a', '../audio/CYCdh_Sab_OpHat-03.wav', hatOneSound],
+    ['s', '../audio/CYCdh_Sab_OpHat-03.wav', hatOneSound],
+    ['d', '../audio/CYCdh_Sab_OpHat-03.wav', hatOneSound],
+    ['z', '../audio/CYCdh_Sab_OpHat-03.wav', hatOneSound],
+    ['x', '../audio/CYCdh_Sab_OpHat-03.wav', hatOneSound],
+    ['c', '../audio/CYCdh_Sab_OpHat-03.wav', hatOneSound]
 ]
 
 const soundArray = [];
@@ -50,8 +52,8 @@ let handleKeyDown = (e) => {
         hatFourSound.play();
     }
     if (e.key === 'e') {
-        hatOneSound.currentTime = 0;
-        hatOneSound.play();
+        hatSixSound.currentTime = 0;
+        hatSixSound.play();
     }
     if (e.key === 'a') {
         hatOneSound.currentTime = 0;
@@ -104,7 +106,7 @@ const drumPads = keybindings.map((drum) =>
                         {drumPads}
                     </div>
                     <div id="options">
-                        <h2>options</h2>
+                        <h2>Options</h2>
                         <h3>{currentPad[0]}</h3>
                         <p>{currentPad[1]}</p>
                         <h3>{hat1}</h3>
