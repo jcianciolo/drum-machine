@@ -4,12 +4,12 @@ const DrumPad = ({ id, audioClip, soundEffect, currentPad, setCurrentPad, handle
 //   let audioFile = new Audio(soundEffect);
 //   let lowerCaseId = id.toLowerCase();
 
-  let handleClick = (e) => {
-      e.preventDefault();
-      setCurrentPad([id, audioClip]);
-      // soundEffect.currentTime = 0;
-      soundEffect.play() 
-  }
+  // let handleClick = (e) => {
+  //     e.preventDefault();
+  //     setCurrentPad([id, audioClip]);
+  //     // soundEffect.currentTime = 0;
+  //     soundEffect.play() 
+  // }
 
 
 //   let handleKeyDown = (e) => {
@@ -25,12 +25,12 @@ const DrumPad = ({ id, audioClip, soundEffect, currentPad, setCurrentPad, handle
 //     }
   return (
     
-    <button onClick={handleClick} className="drum-button">
+    <button className="drum-button" >
             <p>{id}</p>
             <audio
                 className='clip'
-                src={soundEffect}
-                type="audio/mpeg">
+                src={audioClip}
+                type="audio/wav">
                     Your browser does not support the
                     <code>audio</code> element.
             </audio>
