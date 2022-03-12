@@ -4,7 +4,7 @@
 }
 
 .App {
-
+  background-color: lemonchiffon;
 }
 
 
@@ -20,8 +20,11 @@
 
 #container {
   height: 300px;
-  width: 600px;
-  border: 3px solid red;
+  width: 500px;
+  border: 3px ridge goldenrod;
+  color: goldenrod;
+  background-color: lemonchiffon;
+  border-radius: 3px;
   padding: 20px;
 }
 
@@ -39,14 +42,18 @@
 
 #pads {
   display: grid;
-  grid-gap: 10px;
+  /* grid-gap: 0px; */
   grid-template-columns: 1fr 1fr 1fr;
+  
 }
 
 .drum-button {
   padding: 0px;
   height: 70px;
   width: 70px;
+  color: lemonchiffon;
+  background-color: goldenrod;
+  border-radius: 8px;
   /* display: flex;
   flex-direction: column; */
   /* justify-content: center;
@@ -55,10 +62,10 @@
 
 .drum-button p {
   /* text-align: center; */
-  line-height: 4.5;
+  line-height: 3.5;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 ul {

@@ -95,7 +95,7 @@ let handleClickAndKeyDown = (e) => {
         acouKickEighteenSound.play();
     }
     // setCurrentPad(e.target.innerHTML)
-    console.log(e.key)
+    console.log(e.type)
 }
 
 
@@ -162,7 +162,7 @@ const drumPads = keybindings.map((drum) =>
     <div id="drum-machine" onClick={handleClickAndKeyDown} onKeyDown={handleClickAndKeyDown} tabIndex={0}>
         <div id="container">
             <div id="display">
-            <h2 id="display-title">Drums</h2>
+            <h1 id="display-title">Drum Kit</h1>
                 <div id="interactive-content">
                     <div id="pads">
                         {drumPads}
