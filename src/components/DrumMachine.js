@@ -49,7 +49,7 @@ for (let item of keybindings) {
 //     sound.currentTime = 0;
 //     sound.play();
 // }
-let handleClickAndKeyDown = (e) => {
+let handleKeyDown = (e) => {
     e.preventDefault();
     if (e.target.innerHTML === 'q' || e.key === 'q') {
         hatOneSound.currentTime = 0;
@@ -94,8 +94,8 @@ let handleClickAndKeyDown = (e) => {
         acouKickEighteenSound.currentTime = 0;
         acouKickEighteenSound.play();
     }
-    // setCurrentPad(e.target.innerHTML)
-    console.log(e.type)
+    setCurrentPad(e.key)
+    console.log(e.key)
 }
 
 
@@ -143,6 +143,18 @@ let handleClickAndKeyDown = (e) => {
 //     console.log(e.key)
 // }
 
+// let handleKeyDown = (e) => {
+//     e.preventDefault();
+//     // if (e.target.key === lowerCaseId) {
+//     //     setCurrentPad([id, audioClip]);
+//     //     audioFile.play()
+//     // }
+//     // setCurrentPad([id, audioClip]);
+//     // console.log(e.key);
+//     console.log(e.target)
+//   }
+
+
 const drumPads = keybindings.map((drum) => 
 
     <DrumPad 
@@ -150,7 +162,8 @@ const drumPads = keybindings.map((drum) =>
         id={drum[0]} 
         key={drum[0]} 
         audioClip={drum[1]}
-        // soundEffect={drum[2]}
+        soundEffect={drum[2]}
+        setCurrentPad={setCurrentPad}
         // currentPad={currentPad}
         // setCurrentPad={setCurrentPad}
         
@@ -159,7 +172,7 @@ const drumPads = keybindings.map((drum) =>
 
 
   return (
-    <div id="drum-machine" onClick={handleClickAndKeyDown} onKeyDown={handleClickAndKeyDown} tabIndex={0}>
+    <div id="drum-machine" tabIndex={0} onKeyDown={handleKeyDown}>
         <div id="container">
             <div id="display">
             <h1 id="display-title">Drum Kit</h1>
@@ -168,9 +181,8 @@ const drumPads = keybindings.map((drum) =>
                         {drumPads}
                     </div>
                     <div id="options">
-                        <h2>Options</h2>
-                        <h3>{currentPad}</h3>
-
+                        <h2 id="display">Last input:</h2>
+                        <h2>{currentPad}</h2>
                     </div>
                 </div>
             </div>
