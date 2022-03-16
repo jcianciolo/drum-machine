@@ -49,61 +49,8 @@ for (let item of keybindings) {
 //     sound.currentTime = 0;
 //     sound.play();
 // }
-let handleKeyDown = (e) => {
-    e.preventDefault();
-    if (e.target.innerHTML === 'q' || e.key === 'q') {
-        hatOneSound.currentTime = 0;
-        hatOneSound.play();
-    }
-    if (e.target.innerHTML === 'w' || e.key === 'w') {
-        hatFourSound.currentTime = 0;
-        hatFourSound.play();
-    }
-    if (e.target.innerHTML === 'e' || e.key === 'e') {
-
-        hatSixSound.currentTime = 0;
-        hatSixSound.play();
-    }
-    if (e.target.innerHTML === 'a' || e.key === 'a') {
-
-        snareOffSixSound.currentTime = 0;
-        snareOffSixSound.play();
-    }
-    if (e.target.innerHTML=== 's' || e.key === 's') {
-
-        snareFiveSound.currentTime = 0;
-        snareFiveSound.play();
-    }
-    if (e.target.innerHTML === 'd' || e.key === 'd') {
-
-        rimSixSound.currentTime = 0;
-        rimSixSound.play();
-    }
-    if (e.target.innerHTML === 'z' || e.key === 'z') {
-
-        looseKickEightSound.currentTime = 0;
-        looseKickEightSound.play();
-    }
-    if (e.target.innerHTML === 'x' || e.key === 'x') {
-
-        kesKickSevenSound.currentTime = 0;
-        kesKickSevenSound.play();
-    }
-    if (e.target.innerHTML === 'c' || e.key === 'c') {
-
-        acouKickEighteenSound.currentTime = 0;
-        acouKickEighteenSound.play();
-    }
-    setCurrentPad(e.key)
-    console.log(e.key)
-}
-
-
 // let handleKeyDown = (e) => {
-//     // e.preventDefault();
-//     // if (soundArray.includes(e.key)) {
-//     //     console.log(e.key);
-//     // }
+//     e.preventDefault();
 //     if (e.key === 'q') {
 //         hatOneSound.currentTime = 0;
 //         hatOneSound.play();
@@ -113,35 +60,89 @@ let handleKeyDown = (e) => {
 //         hatFourSound.play();
 //     }
 //     if (e.key === 'e') {
+
 //         hatSixSound.currentTime = 0;
 //         hatSixSound.play();
 //     }
 //     if (e.key === 'a') {
+
 //         snareOffSixSound.currentTime = 0;
 //         snareOffSixSound.play();
 //     }
 //     if (e.key === 's') {
+
 //         snareFiveSound.currentTime = 0;
 //         snareFiveSound.play();
 //     }
 //     if (e.key === 'd') {
+
 //         rimSixSound.currentTime = 0;
 //         rimSixSound.play();
 //     }
 //     if (e.key === 'z') {
+
 //         looseKickEightSound.currentTime = 0;
 //         looseKickEightSound.play();
 //     }
-//     if (e.key === 'x') {
+//     if ( e.key === 'x') {
+
 //         kesKickSevenSound.currentTime = 0;
 //         kesKickSevenSound.play();
 //     }
 //     if (e.key === 'c') {
+
 //         acouKickEighteenSound.currentTime = 0;
 //         acouKickEighteenSound.play();
 //     }
+//     setCurrentPad(e.key)
 //     console.log(e.key)
 // }
+
+
+let handleKeyDown = (e) => {
+    // e.preventDefault();
+    // if (soundArray.includes(e.key)) {
+    //     console.log(e.key);
+    // }
+    if (e.key === 'q') {
+        hatOneSound.currentTime = 0;
+        hatOneSound.play();
+    }
+    if (e.key === 'w') {
+        hatFourSound.currentTime = 0;
+        hatFourSound.play();
+    }
+    if (e.key === 'e') {
+        hatSixSound.currentTime = 0;
+        hatSixSound.play();
+    }
+    if (e.key === 'a') {
+        snareOffSixSound.currentTime = 0;
+        snareOffSixSound.play();
+    }
+    if (e.key === 's') {
+        snareFiveSound.currentTime = 0;
+        snareFiveSound.play();
+    }
+    if (e.key === 'd') {
+        rimSixSound.currentTime = 0;
+        rimSixSound.play();
+    }
+    if (e.key === 'z') {
+        looseKickEightSound.currentTime = 0;
+        looseKickEightSound.play();
+    }
+    if (e.key === 'x') {
+        kesKickSevenSound.currentTime = 0;
+        kesKickSevenSound.play();
+    }
+    if (e.key === 'c') {
+        acouKickEighteenSound.currentTime = 0;
+        acouKickEighteenSound.play();
+    }
+    console.log(e.target)
+    setCurrentPad(e.key);
+}
 
 // let handleKeyDown = (e) => {
 //     e.preventDefault();

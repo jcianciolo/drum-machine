@@ -5,28 +5,26 @@ const DrumPad = ({ id, audioClip, soundEffect, currentPad, setCurrentPad }) => {
 //   let lowerCaseId = id.toLowerCase();
 
   let handleClick = (e) => {
-      e.preventDefault();
       soundEffect.play();
       console.log(e.type)
       setCurrentPad(id);
   }
 
 
-  // handleKeyDown = (e) => {
-  //   e.preventDefault();
+  // let handleKeyDown = (e) => {
   //   // if (e.target.key === lowerCaseId) {
   //   //     setCurrentPad([id, audioClip]);
   //   //     audioFile.play()
   //   // }
   //   // setCurrentPad([id, audioClip]);
-  //   soundEffect.play();
+  //   handleClick(e.target);
   //   // console.log(e.key);
   // }
 
 //     }
   return (
     
-    <button className="drum-button" onClick={handleClick} >
+    <button className="drum-button" onClick={handleClick}>
             <p>{id}</p>
             <audio
                 className='clip'
